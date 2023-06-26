@@ -231,20 +231,44 @@
         }
         .FifthSection{
             color: white;
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
         }
-        .FifthSection ul li a{
+
+        .FifthSection ul li a {
             color: white;
         }
-        .FifthSection ul{
+
+        .FifthSection ul {
             list-style-type: none;
             display: flex;
-            justify-content: space-evenly;
+            margin-top: 20px;
+            gap: 20px;
+            justify-content: center;
             align-items: center;
         }
-        .connect-container{
+
+        .connect-container {
             margin: auto;
         }
+        .FifthSection ul li a img{
+            width: 50px;
+            transition: ease 0.344s;
+            opacity: 0.6;
+        }
+        .FifthSection ul li a img:hover{
+            transform: scale(1.2);
+            filter: drop-shadow(0px 0px 0.8px white);
+            opacity: 1;
+        }
     </style>
+    
 </head>
 
 <body>
@@ -257,7 +281,7 @@
                     <li><a href="#secondSection"> About</a></li>
                     <li><a href="#ThirdSection"> Projects</a></li>
                     <li><a href="#FourthSection"> Tutorials</a></li>
-                    <li><a href=""> Connect with Me!</a></li>
+                    <li><a href="#FifthSection"> Connect with Me!</a></li>
                 </ul>
             </div>
         </nav>
@@ -273,7 +297,7 @@
                 </div>
             </div>
             <div class="rightSection">
-                <img src="pro_png.png" alt="">
+                <img src="/pro_png.png" alt="">
             </div>
         </section>
         <section id="secondSection" class="secondSection">
@@ -421,20 +445,20 @@
 
             </div>
         </section>
-        <section class="FifthSection">
+        <section id="FifthSection" class="FifthSection">
             <div class="connect-container">
-            <p>
-                Heyy it's really important to connect with each other so that we can share our learnings with each
-                other!!
-                What you waiting for connect with right now!!
+                <h5 style="font-size: 2rem; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+                    Heyy it's really important to connect with each other so that we can <span class="purple"> share our learnings</span> with each
+                    other!! <br>
+                    What you waiting for <span class="purple"> connect with me right now!!</span>
+                </h5>
                 <ul>
-                    <li><a href="">GitHub</a></li>
-                    <li><a href="">LinkedIn</a></li>
-                    <li><a href="">Instagram</a></li>
-                    <li><a href="">YouTube</a></li>
-                    <li><a href="">Twitter</a></li>
+                    <li><a target="_blank" href="https://github.com/CodeHalcyon"> <img src="github.png"></img></a></li>
+                    <li><a target="_blank" href="https://www.linkedin.com/in/chetan-sirigiri/"><img src="linkedin.png" alt=""></a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/chetan.php/"><img src="instagram.png" alt=""></a></li>
+                    <li><a target="_blank" href="https://www.youtube.com/@chetanprogramming9767"><img src="youtube.png" alt=""></a></li>
+                    <li><a target="_blank" href="https://twitter.com/Chetan07427393"><img src="twitter.png" alt=""></a></li>
                 </ul>
-            </p>
             </div>
         </section>
     </main>
