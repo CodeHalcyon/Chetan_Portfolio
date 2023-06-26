@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fasthand&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: rgb(15, 15, 15);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: rgb(111, 111, 250);
+            height: 60px;
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li {
+            list-style-type: none;
+            margin: 0px 30px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: large;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: rgb(20, 19, 19);
+        }
+
+        .left {
+            font-family: cursive;
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: aliceblue;
+        }
+
+        .firstSection {
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 100px 0px;
+            width: 90%;
+            height: 58vh;
+        }
+
+        .leftSection {
+            width: 30%;
+            font-size: 2rem;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        #element {
+            font-size: 2.5rem;
+            font-family: monospace;
+            color: rgb(111, 111, 250);
+        }
+
+        .element {
+            font-size: bolder;
+        }
+
+        .rightSection {
+            width: 40%;
+        }
+
+        .rightSection img {
+            width: 80%;
+        }
+
+        .box {
+            margin-top: 100px;
+            margin: auto;
+            width: 85%;
+            height: auto;
+            border: 1px solid rgb(116, 109, 109);
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .top-image img {
+            display: block;
+            width: 150px;
+            margin: auto;
+            margin-top: -80px;
+            border-radius: 50%;
+            border: 10px solid white;
+        }
+
+        .my-name {
+            margin-top: 20px;
+            font-size: 2rem;
+            text-align: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: rgb(111, 111, 250);
+        }
+
+        .box p {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1.5rem;
+            margin: 0px 20px;
+            color: rgb(236, 231, 231);
+
+        }
+
+        .purple {
+            color: blueviolet;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .projects {
+            margin: auto;
+            width: 90%;
+            height: auto;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        .project-box {
+            margin: auto;
+            width: 90%;
+            display: flex;
+            color: white;
+            gap: 15px;
+            align-items: center;
+            padding: 10px;
+            margin-block: 10px;
+            border-radius: 10px;
+            transition: ease 0.344s;
+            padding: 40px;
+        }
+
+        .project-box:hover {
+            box-shadow: 1px 0px 20px 2px rgb(209, 198, 198);
+            transform: scale(1.1);
+            border-radius: 15px;
+            margin-block: 20px;
+        }
+
+        .project-image img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+
+        .project-para {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(228, 221, 221);
+        }
+
+        .get-source a {
+            color: rgb(117, 113, 113);
+            font-size: 1rem;
+            display: block;
+            margin-block: 10px;
+            transition: ease 0.5s;
+        }
+
+        .get-source a:hover {
+            color: white;
+        }
+
+        .tutorials-box {
+            margin: auto;
+            width: 90%;
+            /* border: 2px solid white; */
+            color: white;
+            padding: 20px;
+        }
+
+        .tutorial {
+            display: flex;
+            width: auto;
+            /* border: 2px dotted red; */
+            padding: 10px;
+            gap: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .tut-img img {
+            transition: ease 0.4s;
+        }
+
+        .tut-img img:hover {
+            margin: 15px;
+            transform: scale(1.1);
+            box-shadow: 1px 1px 20px 3px white;
+        }
+
+        .community-btn a {
+            color: black;
+            padding: 8px;
+            border: 1px solid white;
+            font-size: 1rem;
+            text-decoration: none;
+            background: linear-gradient(to right, black 50%, white 50%);
+            background-size: 200% 100%;
+            background-position: right bottom;
+            transition: all .5s ease-out;
+        }
+
+        .community-btn a:hover {
+            background-position: left bottom;
+            color: white;
+        }
+        .FifthSection{
+            color: white;
+        }
+        .FifthSection ul li a{
+            color: white;
+        }
+        .FifthSection ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .connect-container{
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="firstSection">
+        <nav>
+            <div class="left">Chetan's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#firstSection"> Home</a></li>
+                    <li><a href="#secondSection"> About</a></li>
+                    <li><a href="#ThirdSection"> Projects</a></li>
+                    <li><a href="#FourthSection"> Tutorials</a></li>
+                    <li><a href=""> Connect with Me!</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="firstSection" class="firstSection">
+            <div class="leftSection">
+                Heyy I'm Chetan and I am a
+                <div class="element"><span id="element"></span></div>
+                <div class="community-btn">
+                    <a href="https://www.instagram.com/learncoderise/">Join my community</a>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="/pro_png.png" alt="">
+            </div>
+        </section>
+        <section id="secondSection" class="secondSection">
+            <div class="box">
+                <div class="top-image">
+                    <img src="pic.jpg" alt="">
+                </div>
+                <div class="my-name">
+                    <h3>Chetan Sirigiri</h3>
+                </div>
+                <p>
+
+                    Hey there!
+                    <br>
+                    I'm <span class="purple"><strong>Chetan Sirigiri</strong></span>, a 19-year-old web developer intern
+                    at Bharat Intern, a passionate learner, and
+                    a creative soul. I'm thrilled to have you on my portfolio website. Here, you'll get a glimpse into
+                    my world as I explore the exciting realms of web development.
+                    <br>
+                    As a dedicated YouTuber, I share my knowledge, insights, and tutorials on my channel, giving back to
+                    the amazing developer community that has inspired me. With a keen eye for design, I strive to create
+                    visually stunning and user-friendly interfaces that leave a lasting impression.
+                    <br>
+                    Join me as I continue to grow, learn, and contribute to the ever-evolving world of web development.
+                    Let's build the future together!
+                    <br><br>
+                    <strong>Welcome to my journey!!</strong><br><br>
+                </p>
+            </div>
+        </section>
+        <section id="ThirdSection" class="ThirdSection">
+            <h1 class="my-name" style="color: white;">Projects</h1>
+            <div class="projects">
+                <div class="project-box">
+                    <div class="project-image">
+                        <img src="guess_num.jpg" alt="">
+                    </div>
+                    <div class="project-disc">
+                        <h1 style="font-size: 2rem;" class="purple">Guess The Number</h1>
+                        <span class="get-source"><a href="https://github.com/CodeHalcyon/Guess_The_number_web"
+                                target="_blank">Get Source Code&#8594;</a></span>
+                        <p class="project-para">This is my small Javascript project, which is about guessing a number
+                            that is already
+                            selected by the computer. The number is from 1 to 100, in order to make a guess select a
+                            number from 1 to 100. The score starts from 100. Everytime you guess the number your score
+                            decreases and the decrement is always compounded. If your score reaches zero or less than
+                            zero, the game ends. There is no limitation for the guesses, you can make "n" number of
+                            guesses</p>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <div class="project-image">
+                        <img src="cdoeoholics_logo.jpg" alt="">
+                    </div>
+                    <div class="project-disc">
+                        <h1 style="font-size: 2rem;" class="purple">Codeoholics Website</h1>
+                        <span class="get-source"><a href="https://github.com/CodeHalcyon/codeoholics.github.io"
+                                target="_blank">Get Source Code&#8594;</a></span>
+                        <p class="project-para">#codeoholics.github.io <br>
+                            This is a website for a coding club in a college. This is just a sample website which I
+                            built for fun.</p>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <div class="project-image">
+                        <img src="jokes-icon-3.jpg" alt="">
+                    </div>
+                    <div class="project-disc">
+                        <h1 style="font-size: 2rem;" class="purple">Joke Generator</h1>
+                        <span class="get-source"><a href="https://github.com/CodeHalcyon/Joke_Generator"
+                                target="_blank">Get Source Code&#8594;</a></span>
+                        <p class="project-para">
+                            This is my project of Javascript where the computer generates a random joke from an array of
+                            10 jokes.
+                        </p>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <div class="project-image">
+                        <img src="coffe.png" alt="">
+                    </div>
+                    <div class="project-disc">
+                        <h1 style="font-size: 2rem;" class="purple">Canteen Project</h1>
+                        <span class="get-source"><a href="https://github.com/CodeHalcyon/Canteen_Project.github.io"
+                                target="_blank">Get Source Code&#8594;</a></span>
+                        <p class="project-para">About
+                            This is a project for our college canteen which me and my fellow mates have been working on.
+                            The project is still under progress.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="FourthSection" class="FourthSection">
+            <h1 class="my-name" style="color: white;">Tutorials</h1>
+            <div class="tutorials-box">
+                <h1 class="purple">Java</h1>
+                <div class="tutorial">
+                    <div class="tut-img">
+                        <a href="https://youtu.be/QTIozKJozP8"><img src="sum_java.webp" alt=""></a>
+                    </div>
+                    <div class="tut-disc">
+                        <h1 style="font-size: 2rem;" class="purple">Sum of digits of a number in Java</h1>
+                        <span class="get-source"><a href="https://youtu.be/QTIozKJozP8">Watch Tutorial</a></span>
+                        <p>This is a tutorial by me on how to calculate sum of digits in a given number in Java</p>
+                    </div>
+                </div>
+                <div class="tutorial">
+                    <div class="tut-img">
+                        <a href="https://youtu.be/BsMNugNRiXQ"><img src="prod_java.webp" alt=""></a>
+                    </div>
+                    <div class="tut-disc">
+                        <h1 style="font-size: 2rem;" class="purple">Product of digits of a number in Java</h1>
+                        <span class="get-source"><a href="https://youtu.be/BsMNugNRiXQ">Watch Tutorial</a></span>
+                        <p>This is a tutorial by me on how to calculate product of digits in a given number in Java</p>
+                    </div>
+                </div>
+                <div class="tutorial">
+                    <div class="tut-img">
+                        <a href="https://www.youtube.com/watch?v=-83hICWatkg"><img src="buzz_java.webp" alt=""></a>
+                    </div>
+                    <div class="tut-disc">
+                        <h1 style="font-size: 2rem;" class="purple">Buzz Number in Java</h1>
+                        <span class="get-source"><a href="https://www.youtube.com/watch?v=-83hICWatkg">Watch
+                                Tutorial</a></span>
+                        <p>This is a tutorial by me on how to calculate sum of digits in a given number in Java</p>
+                    </div>
+                </div>
+                <div class="tutorial">
+                    <div class="tut-img">
+                        <iframe width="300px" height="415"
+                            src="https://www.youtube.com/embed/vlQhmMF6Jeo?autoplay=1&loop=1"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+
+                    </div>
+                    <div class="tut-disc">
+                        <h1 style="font-size: 2rem;" class="purple">Resources to learn JAVA</h1>
+                        <span class="get-source"><a href="https://www.youtube.com/watch?v=-83hICWatkg">Watch
+                                This</a></span>
+                        <p>These are my personel favourite resources to learn JAVA!!</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="FifthSection">
+            <div class="connect-container">
+            <p>
+                Heyy it's really important to connect with each other so that we can share our learnings with each
+                other!!
+                What you waiting for connect with right now!!
+                <ul>
+                    <li><a href="">GitHub</a></li>
+                    <li><a href="">LinkedIn</a></li>
+                    <li><a href="">Instagram</a></li>
+                    <li><a href="">YouTube</a></li>
+                    <li><a href="">Twitter</a></li>
+                </ul>
+            </p>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Learner.', 'Web Developer.', ' Freelancer.', ' Designer.'],
+            typeSpeed: 60,
+        });
+    </script>
+
+</body>
+
+</html>
