@@ -384,12 +384,13 @@
           display: block;
       }
   
-    .project-item {
-      /* width: calc(50% - 20px); */
-      width: 100%;
-      padding-inline: 20px;
-      background: transparent;
-    }
+      .project-item {
+        width: 100%;
+        padding: 20px;
+        margin-block: 30px;
+        background: transparent;
+        box-shadow: 0 4px 8px rgb(78, 78, 78); /* Maintain shadow on small screens */
+      }
     .firstSection {
       flex-direction: column;
       text-align: center;
