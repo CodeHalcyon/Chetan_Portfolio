@@ -363,6 +363,9 @@ nav {
   .project-item {
     width: 100%;
   }
+  .project-item:hover {
+    transform: translateY(-10px) scale(1.05);
+  }
   .community-btn a {
     padding: 8px 16px;
 }
