@@ -398,6 +398,9 @@ nav {
     padding-inline: 20px;
     background: transparent;
   }
+  .project-item:hover {
+    transform: translateY(-10px) scale(1.05);
+  }
   .firstSection {
     flex-direction: column;
     text-align: center;
