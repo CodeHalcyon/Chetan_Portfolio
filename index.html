@@ -18,7 +18,7 @@
   <body>
     <header>
       <nav>
-        <div class="left">My Portfolio</div>
+        <div class="left"><a class="leftLink" href="#">Chetan Sirigiri</a></div>
         <div class="hamburger" id="hamburger">
           <div class="bar"></div>
           <div class="bar"></div>
@@ -245,6 +245,25 @@
     
     </main>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const menuToggle = document.querySelector("#hamburger"); // Your button or element for toggling the menu
+          console.log(menuToggle);
+          
+          const menu = document.querySelector("#menu"); // The menu element
+        console.log(menu.className);
+        
+          if (menuToggle && menu) {
+            menuToggle.addEventListener("click", function() {
+              menu.classList.toggle("active");  
+              console.log(menu.classList);
+              console.log(menu.className);
+            });
+            
+          }
+        });
+        </script>
+        
     <!-- Link to external JavaScript -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <!-- Setup and start animation! -->
@@ -254,6 +273,5 @@
         typeSpeed: 90,
       });
     </script>
-    <script src="./main.js"></script>
   </body>
 </html>
